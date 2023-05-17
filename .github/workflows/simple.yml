@@ -12,18 +12,8 @@ jobs:
         run: |
           node -v
           npm -v
-  run-other-shell-command:
-    runs-on: macos-latest
-    steps:
-      - name: echo a string
-        run: echo "Hello World"
-      - name: multiline script
+      - name: python command 
         run: |
-          node -v
-          npm -v
-          if node -v &>/dev/null; then
-            echo "node is installed"
-            brew list
-          else
-            echo "Brew is not installed"
-          fi
+          import plataform
+          print(plataform.processor())
+        shell: python
