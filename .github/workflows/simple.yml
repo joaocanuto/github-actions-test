@@ -21,7 +21,7 @@ jobs:
         run: |
           node -v
           npm -v
-          if brew -v &>/dev/null; then
+          if node -v &>/dev/null; then
             echo "Brew is installed"
             brew list
           else
