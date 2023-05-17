@@ -6,4 +6,8 @@ key:
     key3:
         key4: 44
         key5: 55
-
+jsonObject: {key: value, key2: value, key3: {key4: value, key5: value }}
+array: 
+    - item1
+    - item2
+    - {key: value}
