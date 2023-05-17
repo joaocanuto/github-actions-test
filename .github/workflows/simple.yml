@@ -22,7 +22,7 @@ jobs:
           node -v
           npm -v
           if node -v &>/dev/null; then
-            echo "Brew is installed"
+            echo "node is installed"
             brew list
           else
             echo "Brew is not installed"
