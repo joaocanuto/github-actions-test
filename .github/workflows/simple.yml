@@ -12,18 +12,16 @@ jobs:
         run: |
           node -v
           npm -v
-  run-other-shell-command:
-    runs-on: macos-latest
-    steps:
-      - name: echo a string
-        run: eccho "Hello World"
-      - name: multiline script
         run: |
-          node -v
-          npm -v
-          if node -v &>/dev/null; then
-            echo "node is installed"
-            brew list
-          else
-            echo "Brew is not installed"
-          fi
+          import platform
+          print(platform.processor())
+        shell: python
+  runs-bash-command:
+    runs-on: windows-latest
+    needs: [run-shell-command]
+    steps:
+      - name: running powershell
+        run: Get-Location
+      - name: running bash on windows-latest
+        run:  pwd
+        shell: bash
