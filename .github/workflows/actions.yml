@@ -13,4 +13,4 @@ jobs:
         with:
           who-to-greet: John
       - name: Log Greeting Time
-        run: echo "${{ {name}={value} }}" >> GITHUB_OUTPUT 
+        run: echo "{name}={value}" >> GITHUB_OUTPUT 
